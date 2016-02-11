@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ze recipe</title>
+        <meta name="description" content="En interaktiv genomgång av Brackets.">
+        <link rel="stylesheet" href="main.css">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <img src="http://www.flaschberger.com/_wp_generated/wp04749088.gif" width="50%" height="50%" />
+        <img id="star1" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="unusedStar.jpg" >
+        <img id="star2" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="unusedStar.jpg" >
+        <img id="star3" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="unusedStar.jpg" >
+        <img id="star4" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="unusedStar.jpg" >
+        <img id="star5" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="unusedStar.jpg" >
+         <li>Ingredienser för fyra personer
+
+<ul id="change">Deg:
+    <li><Strong class="quantity">4</Strong> dl (<Strong class="quantity">250</Strong> g) mjöl</li>
+    <li><Strong class="quantity">1</Strong> krm salt</li>
+    <li><Strong class="quantity">20</Strong> g smör eller <Strong class="quantity">2</Strong> msk matolja</li>
+    <li><Strong class="quantity">1,25</Strong> dl vatten</li>
+
+
+Fyllning:
+    <li><Strong class="quantity">1</Strong> kg syrliga äpplen</li>
+    <li><Strong class="quantity">1</Strong> dl strösocker</li>
+    <li><Strong class="quantity">2</Strong> tsk mald kanel</li>
+    <li><Strong class="quantity">1</Strong> dl russin</li>
+    <li><Strong class="quantity">0,5</Strong> dl ströbröd</li>
+    <li><Strong class="quantity">75</Strong> g pecannötter eller andra nötter</li>
+    <li><Strong class="quantity">75</Strong> g smält smör</li>
+    <li><Strong class="quantity">2</Strong> msk florsocker</li>
+</ul>
+ 
+
+Tillagning:
+Blanda vetemjöl, salt, vatten och smör till en smidig deg, gärna med händerna. Sätt ugnen på 200 grader. Skala äpplen och avlägsna kärnhusen. Skiva dem tunt. Blanda bitarna i en skål med med socker, kanel, russin, ströbröd och hackade nötter.
+
+Prova att hälla i någon matsked rom i äppelblandningen om du vill ha en lite pikantare smak.
+
+Kavla ut degen på en linneduk eller på en omjölad köksbänk. Kavla ut till en mycket tunn deg, cirka 40 x 45 cm.
+
+Pensla ovansidan med smält smör. Bred ut fyllningen på den ena långsidan och rulla ihop en bit i taget till en rulle.
+
+Pensla rullen med smör varefter du rullar ihop den. Slut ihop båda ändarna och lyft över rullen på en plåt med bakpapper. Pensla den övre delen av rullen med smör och grädda Apfelsstrudel i den nedre delen av ugnen i ca. 45-50 minuter.  Pudra florsocker över den något avsvalnade kakan.
+
+Serveras med grädde, vaniljsås eller vaniljglass.</li>
+        <a href="abeshemsida.html">
+            Go back!
+        </a>
+    
+
+<button onclick="changePortion(recept)">Click for 1</button>
+<button onclick="changePortion(recept2)">Click for 2</button>
+        <button onclick="changeNumber('3')">Click for 3</button>
+        <button onclick="changeNumber('4')">Click for 4</button>
+        <button onclick="changeNumber('5')">Click for 5</button>
+
+<script>
+    var recept= ' 555 dl (250 g) mjöl. \
+1111 krm salt. \
+2000 g smör eller 2 msk matolja. \
+1,25000 dl vatten. \
+Fyllningen. \
+1000 kg syrliga äpplen. \
+1000 dl strösocker. \
+2000 tsk mald kanel. \
+1000 dl russin. \
+0,5000 dl ströbröd. \
+75000 g pecannötter eller andra nötter. \
+75000 g smält smör. \
+2000 msk florsocker.'
+
+    var recept2= ' 6666 dl (250 g) mjöl. \
+22222 krm salt. \
+23333 g smör eller 2 msk matolja. \
+1,253333 dl vatten. \
+Fyllningen. \
+14444 kg syrliga äpplen. \
+155550 dl strösocker. \
+2222 tsk mald kanel. \
+1111 dl russin. \
+0,54545 dl ströbröd. \
+7534330 g pecannötter eller andra nötter. \
+75034340 g smält smör. \
+2045500 msk florsocker.'
+
+
+    
+function portionChange(recipeInQuestion)
+{
+    for(i =0; i<14; i++){
+    
+        $( "ul li:nth-child("+i+1+")" ).replaceWith( splitString[i] );
+        
+        var item = document.getElementById("change");
+        item.replaceChild
+//document.getElementById("change").innerHTML = splitString;
+    }
+    
+}
+    
+    function changePortion(portionToChange){
+        var splitString = portionToChange.split(".");
+        for(i=0; i<13; i++){
+            
+        var listEl = document.createElement("li");
+            
+        var node = document.createTextNode(splitString[i]);
+        listEl.appendChild(node);
+        
+        var item2 = document.getElementById("change");
+        item2.replaceChild(listEl, item2.childNodes[i+1]);
+        }
+    }
+    
+    var text = document.getElementsByClassName("quantity");
+    var originaltext = document.getElementsByClassName("quantity");
+    for(var i=0; i<14; i++){
+        var originalTextSize = parseInt(originaltext[i].innerHTML);
+         }
+    
+    var prevNr=1;
+    function changeNumber(number){
+        for(var i=0; i<14; i++){
+       
+        var textSize = parseInt(text[i].innerHTML);
+        var total = number*textSize/prevNr;
+        text[i].innerHTML=total;
+           
+        }
+         prevNr = number;
+    }
+    
+    function mouseOverImg(image){
+
+    
+        return image.setAttribute('src', 'usedStar.jpg');
+    
+    }
+    
+        function mouseOutImg(image){
+
+    
+        return image.setAttribute('src', 'unusedStar.jpg');
+    
+    }
+</script>
+    </body>
+</html>
