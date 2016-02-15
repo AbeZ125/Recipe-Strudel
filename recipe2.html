@@ -9,12 +9,12 @@
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
-        <img src="http://www.flaschberger.com/_wp_generated/wp04749088.gif" width="50%" height="50%" />
-        <img id="star1" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img id="star2" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img id="star3" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img id="star4" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img id="star5" onmouseover="mouseOverImg(this)" onmouseout="mouseOutImg(this)" src="Green.png" >
+        <img class=lederhosen src="http://www.flaschberger.com/_wp_generated/wp04749088.gif" width="50%" height="50%" />
+        <img class=star id=0 onmouseover="mouseOverImg(this,0)" onmouseout="mouseOutImg(this)" src="Green.png" >
+        <img class=star id=1 onmouseover="mouseOverImg(this,1)" onmouseout="mouseOutImg(this)" src="Green.png" >
+        <img class=star id=2 onmouseover="mouseOverImg(this,2)" onmouseout="mouseOutImg(this)" src="Green.png" >
+        <img class=star id=3 onmouseover="mouseOverImg(this,3)" onmouseout="mouseOutImg(this)" src="Green.png" >
+        <img class=star id=4 onmouseover="mouseOverImg(this,4)" onmouseout="mouseOutImg(this)" src="Green.png" >
          <li>Ingredienser för fyra personer
 
 <ul id="change">Deg:
@@ -48,7 +48,7 @@ Pensla ovansidan med smält smör. Bred ut fyllningen på den ena långsidan och
 Pensla rullen med smör varefter du rullar ihop den. Slut ihop båda ändarna och lyft över rullen på en plåt med bakpapper. Pensla den övre delen av rullen med smör och grädda Apfelsstrudel i den nedre delen av ugnen i ca. 45-50 minuter.  Pudra florsocker över den något avsvalnade kakan.
 
 Serveras med grädde, vaniljsås eller vaniljglass.</li>
-        <a href="index.html">
+        <a href="abeshemsida.html">
             Go back!
         </a>
     
@@ -134,20 +134,54 @@ function portionChange(recipeInQuestion)
         }
          prevNr = number;
     }
-    
-    function mouseOverImg(image){
+   /** 
+    function mouseOverImg(image,starid){
 
-    
-        return image.setAttribute('src', 'PurpTaken.png');
+        for(var i=0; i<starid;i++){
+            document.getElementById(i).setAttribute('src','usedStar.jpg');
+        }
+        return image.setAttribute('src', 'usedStar.jpg');
     
     }
     
         function mouseOutImg(image){
 
+    for(var i=0; i<5;i++){
+        document.getElementById(i).setAttribute('src', 'unusedStar.jpg');
+        }
+    } **/
     
-        return image.setAttribute('src', 'Purp.png');
+    $(document).ready(function(){
+
+   $(".star").hover(function(){
+         $(this).prevUntil(".lederhosen").andSelf().attr("src", "Purp.png");
+    });
+        
+        $(".star").mouseleave(function(){
+         $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
+    });
+        
+        $(".star").click(function(){
+            $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
+         $(".star").unbind().prevAll().andSelf();
+          //  alert("You rated it"+ .star)
+          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
+            
+            
+    });
+        
+        $("Strong").one("click",function(){
+            $(this).css("text-decoration", "line-through");
+          //  alert("You rated it"+ .star)
+          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
+            
+    });
+        
+        
     
-    }
+});
+        
+        
 </script>
     </body>
 </html>
