@@ -48,14 +48,24 @@ img {
     border-radius: 4px;
     display: block;
     margin: 1.3em auto;
-    max-width: 95%;
+    max-width: 10%;
     border-radius: 25px;
     
+    
+}
+
+#front-img{
+    max-width: 95%;
+    border-radius: 25px;
 }
 /*En klass*/
 .underlined-text{
     
     text-decoration: underline;
+}
+
+.star{
+    display:inline-block;
 }
 
 
