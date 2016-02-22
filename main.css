@@ -16,9 +16,40 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 99;
+    height: 100%;
+}
+#loading {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(https://38.media.tumblr.com/d5a9d8d96d0c813c64c852af2d8f2f15/tumblr_mvhuu47K7m1qfa1jdo1_500.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+        
+}
+.leChuckImage{
+    background-image: url(http://static.giantbomb.com/uploads/original/0/9327/254035-lechuck.png);
+    margin: 1.3em auto;
+    text-align: center;
+    background-size:cover
+    
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #545454;
+    color:yellowgreen;
     font-weight: 600;
     line-height: 1.3em;
     text-align: center;
@@ -30,10 +61,16 @@ h2 {
 
 a {
     color: #0083e8; 
+    background-color: black;
 }
 
 b, strong {
     font-weight: 600;
+}
+
+div{
+    background-color: black;
+    border-radius: 25px;
 }
 
 samp {
@@ -41,7 +78,7 @@ samp {
 }
 
 img {
-    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+   
     animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
     background: transparent;
     border: 10px solid rgba(0, 0, 0, 0.12);
@@ -78,14 +115,14 @@ img {
     background-color: crimson;
 }
 
-@-webkit-keyframes colorize {
+/*@-webkit-keyframes colorize {
     0% {
         -webkit-filter: grayscale(100%);
     }
     100% {
         -webkit-filter: grayscale(0%);
     }
-}
+}*/
 
 @keyframes colorize {
     0% {
@@ -95,3 +132,11 @@ img {
         filter: grayscale(0%);
     }
 }
+
+
+@media screen and (max-width: 500px){
+   #player{
+    background-color: crimson;
+}
+}
+
