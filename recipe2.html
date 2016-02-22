@@ -9,33 +9,46 @@
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
-        <img class=lederhosen src="http://www.flaschberger.com/_wp_generated/wp04749088.gif" width="50%" height="50%" />
-        <img class=star id=0 onmouseover="mouseOverImg(this,0)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img class=star id=1 onmouseover="mouseOverImg(this,1)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img class=star id=2 onmouseover="mouseOverImg(this,2)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img class=star id=3 onmouseover="mouseOverImg(this,3)" onmouseout="mouseOutImg(this)" src="Green.png" >
-        <img class=star id=4 onmouseover="mouseOverImg(this,4)" onmouseout="mouseOutImg(this)" src="Green.png" >
-         <li>Ingredienser för fyra personer
+        
+        
+      <!--  <div id="preloader"> !-->
+        <div id="loading">&nbsp;</div>
+       <!-- </div> !-->
 
-<ul id="change">Deg:
+        <img class=lederhosen src="http://www.flaschberger.com/_wp_generated/wp04749088.gif" alt="leather"  />
+        <div>
+        <img class=star id=1 onmouseover="mouseOverImg(this,0)" onmouseout="mouseOutImg(this)" src="Green.png" alt="Green" >
+        <img class=star id=2 onmouseover="mouseOverImg(this,1)" onmouseout="mouseOutImg(this)" src="Green.png" alt="Green" >
+        <img class=star id=3 onmouseover="mouseOverImg(this,2)" onmouseout="mouseOutImg(this)" src="Green.png" alt="Green" >
+        <img class=star id=4 onmouseover="mouseOverImg(this,3)" onmouseout="mouseOutImg(this)" src="Green.png" alt="Green" >
+        <img class=star id=5 onmouseover="mouseOverImg(this,4)" onmouseout="mouseOutImg(this)" src="Green.png" alt="Green" >
+        </div>
+            <h2>Rating: <Strong id="rating">0</Strong> Average: <Strong id="averageRating">0</Strong> (<Strong id="nrCount">0</Strong> votes)</h2>
+        <h2></h2>
+        <h3> Ingredienser för <Strong id="portionChange">fyra</Strong> personer </h3>
+
+         <ul class="change">
+        <li>Deg:</li>
+   
     <li><Strong class="quantity">4</Strong> dl (<Strong class="quantity">250</Strong> g) mjöl</li>
     <li><Strong class="quantity">1</Strong> krm salt</li>
     <li><Strong class="quantity">20</Strong> g smör eller <Strong class="quantity">2</Strong> msk matolja</li>
-    <li><Strong class="quantity">1,25</Strong> dl vatten</li>
-
-
-Fyllning:
+    <li><Strong class="quantity">1.25</Strong> dl vatten</li>
+        
+<li>Fyllning:</li>
+        </ul>
+        <ul id="change2">
     <li><Strong class="quantity">1</Strong> kg syrliga äpplen</li>
     <li><Strong class="quantity">1</Strong> dl strösocker</li>
     <li><Strong class="quantity">2</Strong> tsk mald kanel</li>
     <li><Strong class="quantity">1</Strong> dl russin</li>
-    <li><Strong class="quantity">0,5</Strong> dl ströbröd</li>
+    <li><Strong class="quantity">0.5</Strong> dl ströbröd</li>
     <li><Strong class="quantity">75</Strong> g pecannötter eller andra nötter</li>
     <li><Strong class="quantity">75</Strong> g smält smör</li>
     <li><Strong class="quantity">2</Strong> msk florsocker</li>
 </ul>
  
-
+<p>
 Tillagning:
 Blanda vetemjöl, salt, vatten och smör till en smidig deg, gärna med händerna. Sätt ugnen på 200 grader. Skala äpplen och avlägsna kärnhusen. Skiva dem tunt. Blanda bitarna i en skål med med socker, kanel, russin, ströbröd och hackade nötter.
 
@@ -47,141 +60,20 @@ Pensla ovansidan med smält smör. Bred ut fyllningen på den ena långsidan och
 
 Pensla rullen med smör varefter du rullar ihop den. Slut ihop båda ändarna och lyft över rullen på en plåt med bakpapper. Pensla den övre delen av rullen med smör och grädda Apfelsstrudel i den nedre delen av ugnen i ca. 45-50 minuter.  Pudra florsocker över den något avsvalnade kakan.
 
-Serveras med grädde, vaniljsås eller vaniljglass.</li>
-        <a href="index.html">
+Serveras med grädde, vaniljsås eller vaniljglass.</p>
+        <a href="abeshemsida.html">
             Go back!
         </a>
     
 
-<button onclick="changeNumber('1')">Click for 1</button>
-<button onclick="changeNumber('2')">Click for 2</button>
-        <button onclick="changeNumber('3')">Click for 3</button>
-        <button onclick="changeNumber('4')">Click for 4</button>
-        <button onclick="changeNumber('5')">Click for 5</button>
+<button onclick="changeNumber('1','0')">Click for 1</button>
+<button onclick="changeNumber('2','1')">Click for 2</button>
+        <button onclick="changeNumber('3','2')">Click for 3</button>
+        <button onclick="changeNumber('4','3')">Click for 4</button>
+        <button onclick="changeNumber('5','4')">Click for 5</button>
 
-<script>
-    var recept= ' 555 dl (250 g) mjöl. \
-1111 krm salt. \
-2000 g smör eller 2 msk matolja. \
-1,25000 dl vatten. \
-Fyllningen. \
-1000 kg syrliga äpplen. \
-1000 dl strösocker. \
-2000 tsk mald kanel. \
-1000 dl russin. \
-0,5000 dl ströbröd. \
-75000 g pecannötter eller andra nötter. \
-75000 g smält smör. \
-2000 msk florsocker.'
+<script type="text/javascript" src="script.js">
 
-    var recept2= ' 6666 dl (250 g) mjöl. \
-22222 krm salt. \
-23333 g smör eller 2 msk matolja. \
-1,253333 dl vatten. \
-Fyllningen. \
-14444 kg syrliga äpplen. \
-155550 dl strösocker. \
-2222 tsk mald kanel. \
-1111 dl russin. \
-0,54545 dl ströbröd. \
-7534330 g pecannötter eller andra nötter. \
-75034340 g smält smör. \
-2045500 msk florsocker.'
-
-
-    
-function portionChange(recipeInQuestion)
-{
-    for(i =0; i<14; i++){
-    
-        $( "ul li:nth-child("+i+1+")" ).replaceWith( splitString[i] );
-        
-        var item = document.getElementById("change");
-        item.replaceChild
-//document.getElementById("change").innerHTML = splitString;
-    }
-    
-}
-    
-    function changePortion(portionToChange){
-        var splitString = portionToChange.split(".");
-        for(i=0; i<13; i++){
-            
-        var listEl = document.createElement("li");
-            
-        var node = document.createTextNode(splitString[i]);
-        listEl.appendChild(node);
-        
-        var item2 = document.getElementById("change");
-        item2.replaceChild(listEl, item2.childNodes[i+1]);
-        }
-    }
-    
-    var text = document.getElementsByClassName("quantity");
-    var originaltext = document.getElementsByClassName("quantity");
-    for(var i=0; i<14; i++){
-        var originalTextSize = parseInt(originaltext[i].innerHTML);
-         }
-    
-    var prevNr=1;
-    function changeNumber(number){
-        for(var i=0; i<14; i++){
-       
-        var textSize = parseInt(text[i].innerHTML);
-        var total = number*textSize/prevNr;
-        text[i].innerHTML=total;
-           
-        }
-         prevNr = number;
-    }
-   /** 
-    function mouseOverImg(image,starid){
-
-        for(var i=0; i<starid;i++){
-            document.getElementById(i).setAttribute('src','usedStar.jpg');
-        }
-        return image.setAttribute('src', 'usedStar.jpg');
-    
-    }
-    
-        function mouseOutImg(image){
-
-    for(var i=0; i<5;i++){
-        document.getElementById(i).setAttribute('src', 'unusedStar.jpg');
-        }
-    } **/
-    
-    $(document).ready(function(){
-
-   $(".star").hover(function(){
-         $(this).prevUntil(".lederhosen").andSelf().attr("src", "Purp.png");
-    });
-        
-        $(".star").mouseleave(function(){
-         $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
-    });
-        
-        $(".star").click(function(){
-            $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
-         $(".star").unbind().prevAll().andSelf();
-          //  alert("You rated it"+ .star)
-          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
-            
-            
-    });
-        
-        $("Strong").one("click",function(){
-            $(this).css("text-decoration", "line-through");
-          //  alert("You rated it"+ .star)
-          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
-            
-    });
-        
-        
-    
-});
-        
-        
 </script>
     </body>
 </html>
