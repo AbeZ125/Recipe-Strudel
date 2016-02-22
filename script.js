@@ -10,7 +10,7 @@ var portionsInHeader =["en","två","tre","fyra","fem"];
     function changeNumber(number, pos){
         for(var i=0; i<14; i++){
        
-        var textSize = parseFloat(text[i].innerHTML);
+        var textSize = parseInt(text[i].innerHTML);
         var total = number*textSize/prevNr;
         text[i].innerHTML=total;
             
@@ -48,7 +48,7 @@ else{
     });
         
     jQuery(window).load(function(){
-        $("div").load(localStorage.getItem("totPortion"));
+        $("div").load("ajaxTest.asp");
     });
 
         
@@ -57,11 +57,6 @@ else{
          $(".star").hover(function(){
         $("img").fadeOut(1000);
              $("img").fadeIn(1000);
-    });
-        
-         $(".star").mouseleave(function(){
-             //$("img").stop();
-                $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
     });
 
    $(".star").hover(function(){
@@ -84,22 +79,19 @@ else{
             var ratingText = document.getElementById("rating");
             ratingText.innerHTML=idClick;
             count++;
-            localStorage.setItem("nrOfVotes",count);
             
             average=(clickValue+prevStar)/count;
-            localStorage.setItem("avRat",average);
             
             prevStar=clickValue+prevStar;
-            
+            var averageRatingText = document.getElementById("averageRating");
+            averageRatingText.innerHTML=average;
+            document.getElementById("nrCount").innerHTML=count;
             
            
           //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
             
             
     });
-        var averageRatingText = document.getElementById("averageRating");
-            averageRatingText.innerHTML=localStorage.getItem("avRat");
-            document.getElementById("nrCount").innerHTML=localStorage.getItem("nrOfVotes");
         
         $("Strong").one("click",function(){
             $(this).css("text-decoration", "line-through");
