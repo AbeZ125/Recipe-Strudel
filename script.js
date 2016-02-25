@@ -24,10 +24,7 @@
                               
    }
    
-   else if(typeof(Storage)=="undefined"){
-       alert("UNDEF");
-                              
-    }
+ 
 
 else{
     document.getElementsByClassName("quantity").innerHTML="SORRY";
