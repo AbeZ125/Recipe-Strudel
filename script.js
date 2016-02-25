@@ -97,7 +97,7 @@ else{
             $.ajax({
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel&rating="+idParse,
-                success: function(){
+                success: function(data){
                 alert("hej du röstade" + idParse);
                 $('#averageRating').text(data.rating);
                      $('#nrCount').text(data.votes);
