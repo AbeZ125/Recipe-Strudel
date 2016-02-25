@@ -1,9 +1,12 @@
 
     
-    var text = document.getElementsByClassName("quantity");
-    var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
-    var prevNr=1;
+
     
+    var text = document.getElementsByClassName("quantity");
+   
+    
+var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
+    var prevNr=1;
     function changeNumber(number, pos){
         for(var i=0; i<14; i++){
        
@@ -17,14 +20,12 @@
         localStorage.setItem("totPortion",prevNr);
     }
 
-    if(localStorage.getItem("totPortion")!=null){
-        alert("NOT UNDEF");
+    if(typeof(Storage) !="undefined"){
         changeNumber(localStorage.getItem("totPortion"),localStorage.getItem("totPortion")-1);
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
+        //alert(localStorage.getItem("totPortion"));
                               
-   }
-   
- 
+    }
 
 else{
     document.getElementsByClassName("quantity").innerHTML="SORRY";
@@ -32,22 +33,24 @@ else{
  
 
     $(document).ready(function(){
-
-   
-        
-    jQuery(window).load(function(){
+function lol(){
          $.ajax({
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel",
                 success: function(data){
-
+           //     alert("hej ett skepp kommer lastat!");
                      $('#averageRating').text(data.rating);
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
                      jQuery("#loading").fadeOut(2000);
             }
             })
-       
+        }
+   
+        
+    jQuery(window).load(function(){
+     //   $("div").load(localStorage.getItem("totPortion"));
+        lol();
     });
 
         
@@ -59,6 +62,7 @@ else{
     });
         
          $(".star").mouseleave(function(){
+             //$("img").stop();
                 $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
     });
 
@@ -74,7 +78,7 @@ else{
         var prevStar=0;
         $(".star").click(function(){
             $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
-     
+     //    $(".star").unbind().prevAll().andSelf();
             var idClick = $(this).attr('id');
             var clickValue = parseInt(idClick);
             
@@ -85,10 +89,17 @@ else{
             localStorage.setItem("nrOfVotes",count);
             
             average=(clickValue+prevStar)/count;
-           
+            //localStorage.setItem("avRat",average);
             
             prevStar=clickValue+prevStar;
-      
+           // var averageRatingText = document.getElementById("averageRating");
+          //  averageRatingText.innerHTML=localStorage.getItem("avRat");
+          //  document.getElementById("nrCount").innerHTML=localStorage.getItem("nrOfVotes");
+            
+           
+          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
+            
+            
     });
         //API-NYCKEL: f7cac50bfbcb0891
         $('.star').click(function(){
@@ -97,18 +108,19 @@ else{
             $.ajax({
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel&rating="+idParse,
-                success: function(data){
-                alert("hej du röstade" + idParse);
-                $('#averageRating').text(data.rating);
-                     $('#nrCount').text(data.votes);
+                success: function(){
+               // alert("hej du röstade" + idParse);
                 localStorage.setItem("yourRating", idParse);
+                    lol();
+                    console.log("du tryckte lol");
             }
             })
         });
         
         $("Strong").one("click",function(){
             $(this).css("text-decoration", "line-through");
-          
+          //  alert("You rated it"+ .star)
+          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
             
     });
         
