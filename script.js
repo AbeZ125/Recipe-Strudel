@@ -18,6 +18,7 @@
     }
 
     if(typeof(Storage) !="undefined"){
+        alert("UNDEF");
         changeNumber(localStorage.getItem("totPortion"),localStorage.getItem("totPortion")-1);
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
                               
