@@ -99,6 +99,8 @@ else{
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel&rating="+idParse,
                 success: function(){
                 alert("hej du röstade" + idParse);
+                $('#averageRating').text(data.rating);
+                     $('#nrCount').text(data.votes);
                 localStorage.setItem("yourRating", idParse);
             }
             })
