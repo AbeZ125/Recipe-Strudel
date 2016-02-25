@@ -24,7 +24,7 @@
                               
    }
    
-   else if(typeof(Storage) ="undefined"){
+   else if(typeof(Storage)=="undefined"){
        alert("UNDEF");
                               
     }
