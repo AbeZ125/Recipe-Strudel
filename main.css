@@ -106,23 +106,25 @@ img {
 }
 
 
-#recept{
+#deg{
     
     color: darkslateblue;
+}
+
+#fyllning{
+    
+    color: darkslateblue;
+}
+
+#tillagning{
+    
+    color: darkslategreen;
 }
 
 #player{
     background-color: crimson;
 }
 
-/*@-webkit-keyframes colorize {
-    0% {
-        -webkit-filter: grayscale(100%);
-    }
-    100% {
-        -webkit-filter: grayscale(0%);
-    }
-}*/
 
 @keyframes colorize {
     0% {
