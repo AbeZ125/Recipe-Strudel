@@ -9,18 +9,19 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
     var prevNr=1;
     function changeNumber(number,pos){
         //var pos = number-1;
-        console.log(pos);
+        var psn = pos;
+        console.log(psn);
         for(var i=0; i<14; i++){
        
         var textSize = parseFloat(text[i].innerHTML);
         var total = number*textSize/prevNr;
         text[i].innerHTML=total;
             
-           document.getElementById("portionChange").innerHTML=portionsInHeader[pos];
+           document.getElementById("portionChange").innerHTML=portionsInHeader[psn];
         }
          prevNr = number;
         localStorage.setItem("totPortion",prevNr);
-        localStorage.setItem("headerPos",pos);
+        localStorage.setItem("headerPos",psn);
     }
 
     if(localStorage.getItem("totPortion")!=null){
