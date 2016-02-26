@@ -96,11 +96,17 @@ img {
     display:inline-block;
 }
 
+#deg{
+    
+    color: darkgreen;
+}
 
-#recept{
+#fyllning{
     
     color: darkslateblue;
 }
+
+
 
 #player{
     background-color: crimson;
