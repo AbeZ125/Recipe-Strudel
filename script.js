@@ -10,7 +10,7 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
     function changeNumber(number, pos){
     //    var pos = number-1;
         var psn = pos;
-        console.log(psn);
+        console.log(pos);
         for(var i=0; i<14; i++){
        
         var textSize = parseFloat(text[i].innerHTML);
