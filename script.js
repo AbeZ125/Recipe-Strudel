@@ -7,7 +7,8 @@
     
 var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
     var prevNr=1;
-    function changeNumber(number, pos){
+    function changeNumber(number){
+       var pos = number-1;
         for(var i=0; i<14; i++){
        
         var textSize = parseFloat(text[i].innerHTML);
@@ -21,9 +22,9 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
     }
 
     if(typeof(Storage) !="undefined"){
-        changeNumber(localStorage.getItem("totPortion"),localStorage.getItem("totPortion")-1);
+        changeNumber(localStorage.getItem("totPortion"));
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
-        //alert(localStorage.getItem("totPortion"));
+        
                               
     }
 
@@ -33,12 +34,11 @@ else{
  
 
     $(document).ready(function(){
-function lol(){
+function gatherInfo(){
          $.ajax({
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel",
                 success: function(data){
-           //     alert("hej ett skepp kommer lastat!");
                      $('#averageRating').text(data.rating);
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
@@ -49,8 +49,8 @@ function lol(){
    
         
     jQuery(window).load(function(){
-     //   $("div").load(localStorage.getItem("totPortion"));
-        lol();
+    
+        gatherInfo();
     });
 
         
@@ -62,7 +62,7 @@ function lol(){
     });
         
          $(".star").mouseleave(function(){
-             //$("img").stop();
+             $("img").stop();
                 $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
     });
 
@@ -70,12 +70,7 @@ function lol(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Purp.png");
     });
         
-        $(".star").mouseleave(function(){
-         $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
-    });
         var count=0;
-        var average=0;
-        var prevStar=0;
         $(".star").click(function(){
             $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
      //    $(".star").unbind().prevAll().andSelf();
@@ -87,17 +82,8 @@ function lol(){
             ratingText.innerHTML=idClick;
             count++;
             localStorage.setItem("nrOfVotes",count);
-            
-            average=(clickValue+prevStar)/count;
-            //localStorage.setItem("avRat",average);
-            
-            prevStar=clickValue+prevStar;
-           // var averageRatingText = document.getElementById("averageRating");
-          //  averageRatingText.innerHTML=localStorage.getItem("avRat");
-          //  document.getElementById("nrCount").innerHTML=localStorage.getItem("nrOfVotes");
-            
-           
-          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
+
+          
             
             
     });
