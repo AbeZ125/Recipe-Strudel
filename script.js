@@ -7,7 +7,7 @@
     
 var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
     var prevNr=1;
-    function changeNumber(number, pos){
+    function changeNumber(number,pos){
     //    var pos = number-1;
         //var psn = pos;
         console.log(number);
