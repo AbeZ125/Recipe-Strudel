@@ -25,7 +25,7 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
     if(localStorage.getItem("totPortion")!=null){
         changeNumber(localStorage.getItem("totPortion"));
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
-        //alert(localStorage.getItem("totPortion"));
+        
                               
     }
 
@@ -35,12 +35,12 @@ else{
  
 
     $(document).ready(function(){
-function lol(){
+function gatherInfo(){
          $.ajax({
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel",
                 success: function(data){
-           //     alert("hej ett skepp kommer lastat!");
+          
                      $('#averageRating').text(data.rating.toFixed(1));
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
@@ -52,7 +52,7 @@ function lol(){
         
     jQuery(window).load(function(){
      
-        lol();
+        gatherInfo();
     });
 
         
@@ -102,8 +102,8 @@ function lol(){
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel&rating="+idParse,
                 success: function(){
                 localStorage.setItem("yourRating", idParse);
-                    lol();
-                    console.log("du tryckte lol");
+                    gatherInfo();
+                    console.log("du tryckte gatherInfo");
             }
             })
         });
