@@ -22,7 +22,7 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
         localStorage.setItem("totPortion",prevNr);
     }
 
-    if(localStorage.getItem("totPortion")!="null"){
+    if(localStorage.getItem("totPortion")!=null){
         changeNumber(localStorage.getItem("totPortion"));
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
         //alert(localStorage.getItem("totPortion"));
