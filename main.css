@@ -68,6 +68,9 @@ b, strong {
     font-weight: 600;
 }
 
+strong{
+    color: darkslateblue;
+}
 div{
     background-color: black;
     border-radius: 25px;
