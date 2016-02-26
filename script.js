@@ -7,10 +7,10 @@
     
 var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
     var prevNr=1;
-    function changeNumber(number){
-        var pos = number-1;
-       // var psn = pos;
-        console.log(pos);
+    function changeNumber(number, pos){
+    //    var pos = number-1;
+        var psn = pos;
+        console.log(psn);
         for(var i=0; i<14; i++){
        
         var textSize = parseFloat(text[i].innerHTML);
