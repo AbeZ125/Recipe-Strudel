@@ -76,7 +76,7 @@ function gatherInfo(){
         var count=0;
         $(".star").click(function(){
             $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
-     //    $(".star").unbind().prevAll().andSelf();
+     
             var idClick = $(this).attr('id');
             var clickValue = parseInt(idClick);
             
@@ -98,7 +98,7 @@ function gatherInfo(){
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel&rating="+idParse,
                 success: function(){
-               // alert("hej du röstade" + idParse);
+              
                 localStorage.setItem("yourRating", idParse);
                     lol();
                     console.log("du tryckte lol");
@@ -108,8 +108,7 @@ function gatherInfo(){
         
         $("Strong").one("click",function(){
             $(this).css("text-decoration", "line-through");
-          //  alert("You rated it"+ .star)
-          //  $(this).unbind('hover').prevUntil(".lederhosen").andSelf.nextAll().attr('disabled', 'disabled');
+         
             
     });
         
