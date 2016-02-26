@@ -7,8 +7,8 @@
     
 var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
     var prevNr=1;
-    function changeNumber(number){
-        var pos = number-1;
+    function changeNumber(number,pos){
+        //var pos = number-1;
         console.log(pos);
         for(var i=0; i<14; i++){
        
@@ -20,10 +20,11 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
         }
          prevNr = number;
         localStorage.setItem("totPortion",prevNr);
+        localStorage.setItem("headerPos",pos);
     }
 
     if(localStorage.getItem("totPortion")!=null){
-        changeNumber(localStorage.getItem("totPortion"));
+        changeNumber(localStorage.getItem("totPortion"), localStorage.getItem("headerPos"));
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
         
                               
