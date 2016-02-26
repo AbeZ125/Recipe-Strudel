@@ -1,8 +1,7 @@
 html {
     background-color: black;
-    background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
-    background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
-    -webkit-font-smoothing: antialiased;
+  //  background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
+ //   background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
 }
 
 body {
@@ -16,16 +15,6 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
-#preloader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fefefe;
-    z-index: 99;
-    height: 100%;
-}
 #loading {
     width: 200px;
     height: 200px;
@@ -84,7 +73,7 @@ samp {
 
 img {
    
-    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    //animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
     background: transparent;
     border: 10px solid rgba(0, 0, 0, 0.12);
     border-radius: 4px;
