@@ -69,7 +69,10 @@ function gatherInfo(){
    $(".star").hover(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Purp.png");
     });
-        
+        $(".star").mouseleave(function(){
+         $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
+    });
+    
         var count=0;
         $(".star").click(function(){
             $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
