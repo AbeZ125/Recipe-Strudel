@@ -8,7 +8,8 @@
 var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
     var prevNr=1;
     function changeNumber(number){
-       var pos = number-1;
+        var pos = number-1;
+        console.log(pos);
         for(var i=0; i<14; i++){
        
         var textSize = parseFloat(text[i].innerHTML);
@@ -24,7 +25,7 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
     if(typeof(Storage) !="undefined"){
         changeNumber(localStorage.getItem("totPortion"));
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
-        
+        //alert(localStorage.getItem("totPortion"));
                               
     }
 
@@ -34,11 +35,12 @@ else{
  
 
     $(document).ready(function(){
-function gatherInfo(){
+function lol(){
          $.ajax({
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel",
                 success: function(data){
+           //     alert("hej ett skepp kommer lastat!");
                      $('#averageRating').text(data.rating);
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
@@ -49,8 +51,8 @@ function gatherInfo(){
    
         
     jQuery(window).load(function(){
-    
-        gatherInfo();
+     
+        lol();
     });
 
         
@@ -69,14 +71,15 @@ function gatherInfo(){
    $(".star").hover(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Purp.png");
     });
+        
         $(".star").mouseleave(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
     });
-    
         var count=0;
+       
         $(".star").click(function(){
             $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
-     
+    
             var idClick = $(this).attr('id');
             var clickValue = parseInt(idClick);
             
@@ -85,8 +88,8 @@ function gatherInfo(){
             ratingText.innerHTML=idClick;
             count++;
             localStorage.setItem("nrOfVotes",count);
-
-          
+            
+        
             
             
     });
@@ -98,7 +101,6 @@ function gatherInfo(){
                 method: "GET",
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel&rating="+idParse,
                 success: function(){
-              
                 localStorage.setItem("yourRating", idParse);
                     lol();
                     console.log("du tryckte lol");
