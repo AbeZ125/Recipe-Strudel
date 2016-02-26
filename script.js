@@ -13,7 +13,7 @@ var portionsInHeader =["en person","två personer","tre personer","fyra personer
             var position=pos;
              console.log("hej" + position);
        
-        var textSize = parseFloat(text[i].innerHTML);
+        var textSize = parseFloat(text[i].innerHTML).toFixed(2);
         var total = number*textSize/prevNr;
         text[i].innerHTML=total;
             
