@@ -41,7 +41,7 @@ function lol(){
                 url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=f7cac50bfbcb0891&recipe=apfelstrudel",
                 success: function(data){
            //     alert("hej ett skepp kommer lastat!");
-                     $('#averageRating').text(data.rating);
+                     $('#averageRating').text(data.rating.toFixed(1));
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
                      jQuery("#loading").fadeOut(2000);
