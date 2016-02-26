@@ -118,15 +118,12 @@ img {
    #player{
     background-color: blue;
 }
-body {
-    margin: 0 auto;
-    padding: 2em 2em 4em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #545454;
-    background-color: red;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+.leChuckImage{
+    background-image: url(http://img01.deviantart.net/aad0/i/2009/285/7/7/guybrush_threepwood___pc_by_yaku_zan.jpg);
+    margin: 1.3em auto;
+    text-align: center;
+    background-size:cover
+    
 }
 }
 
