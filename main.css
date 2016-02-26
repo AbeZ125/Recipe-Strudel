@@ -55,6 +55,9 @@ a {
 b, strong {
     font-weight: 600;
 }
+p {
+    color: red;
+}
 
 strong{
     color: darkslateblue;
