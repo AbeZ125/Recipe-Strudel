@@ -7,25 +7,25 @@
     
 var portionsInHeader =["en person","två personer","tre personer","fyra personer","fem personer"];
     var prevNr=1;
-    function changeNumber(number,pos){
+    function changeNumber(number){
         //var pos = number-1;
-        var psn = pos;
-        console.log(psn);
+       // var psn = pos;
+        console.log(pos);
         for(var i=0; i<14; i++){
        
         var textSize = parseFloat(text[i].innerHTML);
         var total = number*textSize/prevNr;
         text[i].innerHTML=total;
             
-           document.getElementById("portionChange").innerHTML=portionsInHeader[psn];
+           document.getElementById("portionChange").innerHTML=portionsInHeader[pos];
         }
          prevNr = number;
         localStorage.setItem("totPortion",prevNr);
-        localStorage.setItem("headerPos",psn);
+       // localStorage.setItem("headerPos",psn);
     }
 
     if(localStorage.getItem("totPortion")!=null){
-        changeNumber(localStorage.getItem("totPortion"), localStorage.getItem("headerPos"));
+        changeNumber(localStorage.getItem("totPortion"));
         document.getElementsByClassName("quantity").innerHTML=localStorage.getItem("totPortion");
         
                               
