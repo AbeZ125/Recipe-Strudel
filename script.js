@@ -1,7 +1,7 @@
 
     
 
-    var voted=0;
+    var vote=0;
     var text = document.getElementsByClassName("quantity");
    
     
@@ -78,9 +78,9 @@ function gatherInfo(){
         
         $(".star").mouseleave(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
-         if(voted>0){
+         if(vote>0){
              
-            $("#"+voted).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
+            $("#"+vote).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
          }
          
     });
@@ -91,7 +91,7 @@ function gatherInfo(){
     
             var idClick = $(this).attr('id');
             var clickValue = parseInt(idClick);
-            voted = idClick;
+            vote = idClick;
             
             var ratingText = document.getElementById("rating");
             ratingText.innerHTML=idClick;
