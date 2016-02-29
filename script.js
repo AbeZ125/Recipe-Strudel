@@ -81,6 +81,7 @@ function gatherInfo(){
          if(vote>0){
              
             $("#"+vote).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
+            console.log(vote);
          }
          
     });
