@@ -1,7 +1,7 @@
 
     
 
-    
+    var voted=0;
     var text = document.getElementsByClassName("quantity");
    
     
@@ -78,6 +78,11 @@ function gatherInfo(){
         
         $(".star").mouseleave(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
+         if(voted==1){
+             
+             alert("LOLOL");
+         }
+         
     });
         var count=0;
        
@@ -92,6 +97,7 @@ function gatherInfo(){
             ratingText.innerHTML=idClick;
             count++;
             localStorage.setItem("nrOfVotes",count);
+            voted=1;
             
         
             
