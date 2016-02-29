@@ -78,7 +78,7 @@ function gatherInfo(){
         
         $(".star").mouseleave(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
-         if(voted==0){
+         if(voted==1){
              
             console.log("nu är voted " + voted);
          }
