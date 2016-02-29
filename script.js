@@ -97,7 +97,7 @@ function gatherInfo(){
             ratingText.innerHTML=idClick;
             count++;
             localStorage.setItem("nrOfVotes",count);
-            voted=1;
+            
             
         
             
