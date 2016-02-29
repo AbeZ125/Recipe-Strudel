@@ -80,7 +80,7 @@ function gatherInfo(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
          if(voted==0){
              
-             alert("LOLOL");
+            console.log("nu är voted " + voted);
          }
          
     });
