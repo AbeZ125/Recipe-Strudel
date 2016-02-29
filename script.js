@@ -91,7 +91,7 @@ function gatherInfo(){
     
             var idClick = $(this).attr('id');
             var clickValue = parseInt(idClick);
-            
+            voted = idClick;
             
             var ratingText = document.getElementById("rating");
             ratingText.innerHTML=idClick;
