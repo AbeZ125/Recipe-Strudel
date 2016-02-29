@@ -67,10 +67,10 @@ function gatherInfo(){
              $("img").fadeIn(1000);
     });
         
-         $(".star").mouseleave(function(){
+     /*$(".star").mouseleave(function(){
              $("img").stop();
                 $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
-    });
+    });*/
 
    $(".star").hover(function(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Purp.png");
