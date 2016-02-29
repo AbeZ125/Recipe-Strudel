@@ -62,10 +62,10 @@ function gatherInfo(){
         
         
 
-         $(".star").hover(function(){
+   /*      $(".star").hover(function(){
         $("img").fadeOut(1000);
              $("img").fadeIn(1000);
-    });
+    });*/
         
      /*$(".star").mouseleave(function(){
              $("img").stop();
@@ -80,7 +80,7 @@ function gatherInfo(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
          if(voted==1){
              
-            console.log("nu är voted " + voted);
+            $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpleTaken.png");
          }
          
     });
