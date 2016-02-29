@@ -80,7 +80,7 @@ function gatherInfo(){
          $(this).prevUntil(".lederhosen").andSelf().attr("src", "Green.png");
          if(voted==1){
              
-            $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpleTaken.png");
+            $(this).prevUntil(".lederhosen").andSelf().attr("src", "PurpTaken.png");
          }
          
     });
