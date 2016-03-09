@@ -121,8 +121,12 @@ img {
     background-color: blue;
 }
 
-body{
-        background-image: url(http://los-memes.com/wp-content/uploads/2015/09/Guybrush-Threepwood.png);
-    }
+.leChuckImage{
+    background-image: url(http://los-memes.com/wp-content/uploads/2015/09/Guybrush-Threepwood.png);
+    margin: 1.3em auto;
+    text-align: center;
+    background-size:cover
+    
+}
 }
 
