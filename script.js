@@ -40,7 +40,7 @@ else{
 
     $(document).ready(function(){
         console.log("hiding");
-     //   $('#toolbar').hide();
+        $('#toolbar').hide();
         console.log("hid it");
 function gatherInfo(){
          $.ajax({
@@ -53,7 +53,7 @@ function gatherInfo(){
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
                      jQuery("#loading").hide();
                      console.log("showing");
-                   //  $("#toolbar").show();
+                     $("#toolbar").show();
                      console.log("showed it");
             }
             })
@@ -113,9 +113,9 @@ function gatherInfo(){
         //API-NYCKEL: f7cac50bfbcb0891
         $('.star').click(function(){
             console.log("showing the loading");
-         //   $("#loading").show();
+            $("#loading").show();
             console.log("hiding the toolbar");
-           // $("#toolbar").hide();
+            $("#toolbar").hide();
             var theId = $(this).attr('id');
             var idParse = parseInt(theId);
             $.ajax({
