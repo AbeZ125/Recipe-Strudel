@@ -66,6 +66,8 @@ b, strong {
 }
 p {
     color: white;
+    background-image: url(http://los-memes.com/wp-content/uploads/2015/09/Guybrush-Threepwood.png);
+    background-repeat: repeat-y;
 }
 
 li{
