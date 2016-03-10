@@ -67,8 +67,13 @@ p {
 li{
     color: white;
     /*background-color: black;*/
-    background-image: url(http://rs534.pbsrc.com/albums/ee347/Defalto/navigatorhead.gif~c200);
     
+}
+ul{
+   /*color: white;*/
+    /*background-color: black;*/
+    background-image: url(http://los-memes.com/wp-content/uploads/2015/09/Guybrush-Threepwood.png);
+    background-repeat: repeat-y;
 }
 strong{
     color: darkgoldenrod;
