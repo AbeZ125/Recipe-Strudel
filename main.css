@@ -59,6 +59,10 @@ p {
     color: red;
 }
 
+li{
+    color: darkgoldenrod;
+    
+}
 strong{
     color: darkgoldenrod;
 }
