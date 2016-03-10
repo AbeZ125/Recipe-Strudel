@@ -51,9 +51,9 @@ function gatherInfo(){
                      $('#averageRating').text(data.rating.toFixed(1));
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
-                     jQuery("#loading").fadeOut(2000);
+                     jQuery("#loading").hide();
                      console.log("showing");
-                     $("#toolbar").fadeIn(2000);
+                     $("#toolbar").show();
                      console.log("showed it");
             }
             })
