@@ -39,10 +39,7 @@ body {
     
 }
 
-.lederhosen{
-     background-image: url(https://raw.githubusercontent.com/ramonmcros/skeletor-syntax/master/skeletor-250.png);
-     background-repeat: repeat-x;
-}
+
 h1, h2, h3, h4, h5, h6{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #545454;
@@ -66,8 +63,6 @@ b, strong {
 }
 p {
     color: white;
-    background-image: url(http://los-memes.com/wp-content/uploads/2015/09/Guybrush-Threepwood.png);
-    background-repeat: repeat-y;
 }
 
 li{
@@ -117,8 +112,7 @@ img {
 
 .star{
     display:inline-block;
-    background-image: url(http://los-memes.com/wp-content/uploads/2015/09/Guybrush-Threepwood.png);
-    background-repeat: repeat-y;
+    
     
 }
 
