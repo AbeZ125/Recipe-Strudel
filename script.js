@@ -53,7 +53,7 @@ function gatherInfo(){
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
                      jQuery("#loading").fadeOut(2000);
                      console.log("showing");
-                     $("#toolbar").fadeIn("slow");
+                     $("#toolbar").fadeIn(2000);
                      console.log("showed it");
             }
             })
