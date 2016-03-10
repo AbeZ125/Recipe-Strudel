@@ -115,6 +115,8 @@ img {
 .underlined-text{
     
     text-decoration: underline;
+    background-image: url(dark_embroidery.png);
+    background-repeat: repeat-x;
 }
 
 .star{
