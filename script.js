@@ -39,6 +39,7 @@ else{
  
 
     $(document).ready(function(){
+        $('#toolbar').hide();
 function gatherInfo(){
          $.ajax({
                 method: "GET",
@@ -49,6 +50,7 @@ function gatherInfo(){
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
                      jQuery("#loading").fadeOut(2000);
+                     $("#toolbar").show();
             }
             })
         }
