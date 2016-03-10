@@ -115,8 +115,13 @@ img {
 .underlined-text{
     
     text-decoration: underline;
+    
+}
+
+.banner{
     background-image: url(dark_embroidery.png);
     background-repeat: repeat-x;
+    border-radius: 25px;
 }
 
 .star{
