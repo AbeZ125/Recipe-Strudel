@@ -18,7 +18,7 @@ body {
     float: center;
     width: 200px;
     height: 200px;
-    position: absolute;
+   /* position: absolute;*/
 
     
     top: 50%;
@@ -26,7 +26,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
-   /* margin: -100px 0 0 -100px;*/
+   
         
 }
 .leChuckImage{
