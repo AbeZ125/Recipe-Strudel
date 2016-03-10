@@ -14,9 +14,6 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
-#toolbar{
-     z-index:-1;
-}
 #loading {
    /* float: center;*/
     width: 200px;
@@ -30,8 +27,7 @@ body {
     /* margin: -100px 0 0 -100px; */
     /*margin:0 auto;*/
     display: block;
-     z-index:1;
-   
+
         
 }
 .leChuckImage{
