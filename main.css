@@ -15,17 +15,16 @@ body {
 }
 
 #loading {
-    float: center;
+   /* float: center;*/
     width: 200px;
     height: 200px;
     position: absolute;
-
-    
+    left: 50%;
     top: 50%;
     background-image: url(https://38.media.tumblr.com/d5a9d8d96d0c813c64c852af2d8f2f15/tumblr_mvhuu47K7m1qfa1jdo1_500.gif);
     background-repeat: no-repeat;
     background-position: center;
-    margin: auto;
+     margin: -100px 0 0 -100px;
    
         
 }
