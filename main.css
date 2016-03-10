@@ -35,6 +35,7 @@ body {
     margin: 1.3em auto;
     text-align: center;
     background-size:cover
+    background-repeat: repeat-y;
     
 }
 
