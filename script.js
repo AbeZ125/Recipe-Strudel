@@ -112,7 +112,9 @@ function gatherInfo(){
     });
         //API-NYCKEL: f7cac50bfbcb0891
         $('.star').click(function(){
+            console.log("showing the loading");
             $("#loading").show();
+            console.log("hiding the toolbar");
             $("#toolbar").hide();
             var theId = $(this).attr('id');
             var idParse = parseInt(theId);
