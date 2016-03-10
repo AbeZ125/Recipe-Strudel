@@ -39,7 +39,9 @@ else{
  
 
     $(document).ready(function(){
+        console.log("hiding");
         $('#toolbar').hide();
+        console.log("hid it");
 function gatherInfo(){
          $.ajax({
                 method: "GET",
@@ -50,7 +52,9 @@ function gatherInfo(){
                      $('#nrCount').text(data.votes);
                      document.getElementById("rating").innerHTML=localStorage.getItem("yourRating");
                      jQuery("#loading").fadeOut(2000);
+                     console.log("showing");
                      $("#toolbar").show();
+                     console.log("showed it");
             }
             })
         }
